@@ -316,7 +316,7 @@ body {
   z-index: -1;
   top: 1.875rem;
   right: 0;
-  background-image: url("/imgs/deco4.png");
+  background-image: url("imgs/deco4.png");
 }
 .lorem .section-title,
 .lorem .lead,
@@ -347,7 +347,7 @@ body {
   top: -1.875rem;
   left: -1.875rem;
   z-index: -1;
-  background-image: url("/imgs/deco3.png");
+  background-image: url("imgs/deco3.png");
 }
 .ipsum-header .suptitle {
   margin-bottom: 1rem;
