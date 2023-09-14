@@ -39,5 +39,28 @@
     @include laptop13 {
       display: none;
     }
+
+    .line,
+    .line::before,
+    .line::after {
+      width: 35px;
+      height: 2px;
+      display: block;
+      background-color: $white;
+      position: relative;
+    }
+
+    .line::after,
+    .line::before {
+      @extend .pseudo;
+    }
+
+    .line::before {
+      top: -10px;
+    }
+    .line::after {
+      bottom: -8px;
+      width: 20px;
+    }
   }
 }
