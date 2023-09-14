@@ -1,0 +1,40 @@
+.ipsum {
+  margin-top: 6.25rem;
+  &-header {
+    text-align: center;
+    @include laptop13 {
+      max-width: 50%;
+      margin: 0 auto;
+    }
+
+    position: relative;
+
+    &::before {
+      @extend .pseudo;
+      width: 8.875rem;
+      height: 9.5625rem;
+      top: -1.875rem;
+      left: -1.875rem;
+      z-index: -1;
+      background-image: url("/imgs/deco3.png");
+    }
+
+    .suptitle {
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &-cards {
+    margin-top: 4.375rem;
+    display: grid;
+    gap: 1.875rem;
+
+    @include laptop13 {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+}

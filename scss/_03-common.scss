@@ -1,0 +1,97 @@
+.container {
+  max-width: $container-size;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.transition {
+  transition: 0.4s ease all;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8125rem 1.875rem;
+  border-radius: 4.6875rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  letter-spacing: 0.0394rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  border: 1px solid;
+  @extend .transition;
+}
+
+.btn-pink {
+  @extend .btn;
+  color: $white;
+  background-color: $pink;
+  border-color: $pink;
+  &:hover {
+    color: $pink;
+    background-color: rgba($color: $pink, $alpha: 0.15);
+  }
+}
+
+.btn-white {
+  @extend .btn;
+  color: $black;
+  background-color: $white;
+  border-color: $white;
+  &:hover {
+    background-color: rgba($color: $pink, $alpha: 0.15);
+    color: $white;
+  }
+}
+
+.pseudo {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.suptitle {
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 2rem;
+  letter-spacing: 0.1875rem;
+  color: $grey-50;
+  display: block;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 4rem;
+}
+
+.section-text {
+  color: $grey-50;
+  margin-bottom: 1.875rem;
+  line-height: 2rem;
+}
+
+.card {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, #4d4f95 0%, #2b2d66 100%);
+  box-shadow: 0px 24px 48px 0px rgba(0, 1, 44, 0.16);
+
+  &-body {
+    padding: 30px 30px 40px;
+
+    h3 {
+      font-size: 1.5rem;
+
+      font-weight: 300;
+      line-height: 2rem;
+      margin-bottom: 30px;
+    }
+
+    .date {
+      color: $grey-50;
+
+      line-height: 2rem;
+    }
+  }
+}

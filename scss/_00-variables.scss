@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700&display=swap");
+
+$white: #fff;
+$black: #000;
+$pink: #e6606c;
+$yellow: #e8ab36;
+$grey-light: #efefef;
+$grey-50: rgba(255, 255, 255, 0.5);
+$blue: #6357f6;
+
+$body-bg: linear-gradient(237deg, #2c2d65 0.35%, #201f22 100%);
+
+$barlow: "Barlow", sans-serif;
+
+$container-size: 1200px;
+
+// BREAKPOINTS
+
+$ipad: 768px;
+$ipadPro: 1024px;
+$laptop13: 1280px;
+$laptop: 1440px;
+$pc: 1920px;
+$bigPc: 2560px;
+$fourK: 3440px;

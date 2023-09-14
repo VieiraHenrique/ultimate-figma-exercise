@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@200;300;400;500;600;700&display=swap");
+/* MIXINS */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
+
+.transition, .header .nav a, .btn, .btn-white, .btn-pink {
+  transition: 0.4s ease all;
+}
+
+.btn, .btn-white, .btn-pink {
+  display: inline-block;
+  padding: 0.8125rem 1.875rem;
+  border-radius: 4.6875rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  letter-spacing: 0.0394rem;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  border: 1px solid;
+}
+
+.btn-pink {
+  color: #fff;
+  background-color: #e6606c;
+  border-color: #e6606c;
+}
+.btn-pink:hover {
+  color: #e6606c;
+  background-color: rgba(230, 96, 108, 0.15);
+}
+
+.btn-white {
+  color: #000;
+  background-color: #fff;
+  border-color: #fff;
+}
+.btn-white:hover {
+  background-color: rgba(230, 96, 108, 0.15);
+  color: #fff;
+}
+
+.pseudo, .ipsum-header::before, .lorem-text::after, .hero-text::after, .hero-text::before {
+  content: "";
+  position: absolute;
+  display: block;
+}
+
+.suptitle {
+  text-transform: uppercase;
+  font-size: 1rem;
+  line-height: 2rem;
+  letter-spacing: 0.1875rem;
+  color: rgba(255, 255, 255, 0.5);
+  display: block;
+}
+
+.section-title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 4rem;
+}
+
+.section-text {
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 1.875rem;
+  line-height: 2rem;
+}
+
+.card {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 0.125rem solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, #4d4f95 0%, #2b2d66 100%);
+  box-shadow: 0px 24px 48px 0px rgba(0, 1, 44, 0.16);
+}
+.card-body {
+  padding: 30px 30px 40px;
+}
+.card-body h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 2rem;
+  margin-bottom: 30px;
+}
+.card-body .date {
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 2rem;
+}
+
+body {
+  min-height: 200vh;
+  font-family: "Barlow", sans-serif;
+  background: linear-gradient(237deg, #2c2d65 0.35%, #201f22 100%);
+  background-repeat: no-repeat;
+  background-size: auto;
+  color: #fff;
+}
+@media screen and (min-width: 1280px) {
+  body {
+    background: url("imgs/deco1.png"), linear-gradient(237deg, #2c2d65 0.35%, #201f22 100%);
+    background-position: right -8.75rem top -5rem, center center;
+    background-repeat: no-repeat;
+  }
+}
+@media screen and (min-width: 1920px) {
+  body {
+    background-size: 57rem, auto;
+  }
+}
+@media screen and (min-width: 2560px) {
+  body {
+    background-position: right 11.45rem top, center center;
+  }
+}
+@media screen and (min-width: 3440px) {
+  body {
+    background-position: right 31.45rem top 5.5rem, center center;
+  }
+}
+
+.header {
+  padding: 1.9375rem 0;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  text-transform: uppercase;
+}
+.header .logo span {
+  color: #e6606c;
+}
+.header .nav {
+  align-items: center;
+  gap: 2.0625rem;
+  display: none;
+}
+@media screen and (min-width: 1280px) {
+  .header .nav {
+    display: flex;
+  }
+}
+.header .nav a {
+  font-size: 0.875rem;
+}
+.header .nav a:hover {
+  color: #e6606c;
+}
+@media screen and (min-width: 1280px) {
+  .header .hamburger {
+    display: none;
+  }
+}
+
+.hero .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 85vh;
+  align-items: center;
+}
+@media screen and (min-width: 1280px) {
+  .hero .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.hero-text {
+  position: relative;
+  text-align: center;
+}
+@media screen and (min-width: 1280px) {
+  .hero-text {
+    max-width: 90%;
+    text-align: left;
+  }
+}
+.hero-text::before {
+  width: 8.875rem;
+  height: 9.5625rem;
+  background-image: url("/imgs/deco3.png");
+  background-size: contain;
+  top: -3.875rem;
+  left: -3rem;
+  z-index: -1;
+}
+.hero-text::after {
+  width: 11.5rem;
+  height: 11.3125rem;
+  background-image: url("/imgs/deco2.png");
+  background-size: contain;
+  bottom: -4.1875rem;
+  right: 3.625rem;
+  z-index: -1;
+}
+.hero h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  letter-spacing: 0.18rem;
+  text-transform: uppercase;
+  margin-bottom: 1.3125rem;
+}
+.hero .lead {
+  color: #e8ab36;
+  font-size: 2rem;
+  letter-spacing: 0.09rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 1.3125rem;
+}
+.hero .text {
+  margin-bottom: 1.3125rem;
+  color: #efefef;
+  font-weight: 300;
+  line-height: 2rem;
+  letter-spacing: 0.045rem;
+}
+.hero .cta {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+@media screen and (min-width: 1280px) {
+  .hero .cta {
+    justify-content: flex-start;
+  }
+}
+
+.lorem {
+  margin-top: 3.75rem;
+}
+.lorem .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (min-width: 1280px) {
+  .lorem .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.lorem-text {
+  position: relative;
+  text-align: center;
+}
+@media screen and (min-width: 1280px) {
+  .lorem-text {
+    max-width: 80%;
+    text-align: left;
+  }
+}
+.lorem-text::after {
+  width: 13.125rem;
+  height: 13.125rem;
+  z-index: -1;
+  top: 1.875rem;
+  right: 0;
+  background-image: url("/imgs/deco4.png");
+}
+.lorem .section-title,
+.lorem .lead,
+.lorem .suptitle {
+  margin-bottom: 1.25rem;
+}
+.lorem .lead {
+  font-size: 1.25rem;
+  line-height: 2rem; /* 160% */
+}
+
+.ipsum {
+  margin-top: 6.25rem;
+}
+.ipsum-header {
+  text-align: center;
+  position: relative;
+}
+@media screen and (min-width: 1280px) {
+  .ipsum-header {
+    max-width: 50%;
+    margin: 0 auto;
+  }
+}
+.ipsum-header::before {
+  width: 8.875rem;
+  height: 9.5625rem;
+  top: -1.875rem;
+  left: -1.875rem;
+  z-index: -1;
+  background-image: url("/imgs/deco3.png");
+}
+.ipsum-header .suptitle {
+  margin-bottom: 1rem;
+}
+.ipsum-header .section-title {
+  margin-bottom: 2rem;
+}
+.ipsum-cards {
+  margin-top: 4.375rem;
+  display: grid;
+  gap: 1.875rem;
+}
+@media screen and (min-width: 1280px) {
+  .ipsum-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

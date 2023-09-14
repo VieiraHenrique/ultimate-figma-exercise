@@ -1,0 +1,44 @@
+.lorem {
+  margin-top: 3.75rem;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    align-items: center;
+    gap: 30px;
+
+    @include laptop13 {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &-text {
+    position: relative;
+    text-align: center;
+    @include laptop13 {
+      max-width: 80%;
+      text-align: left;
+    }
+
+    &::after {
+      @extend .pseudo;
+      width: 13.125rem;
+      height: 13.125rem;
+      z-index: -1;
+      top: 1.875rem;
+      right: 0;
+      background-image: url("/imgs/deco4.png");
+    }
+  }
+
+  .section-title,
+  .lead,
+  .suptitle {
+    margin-bottom: 1.25rem;
+  }
+
+  .lead {
+    font-size: 1.25rem;
+    line-height: 2rem; /* 160% */
+  }
+}

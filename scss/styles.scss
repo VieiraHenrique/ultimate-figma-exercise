@@ -1,0 +1,36 @@
+@import "./00-variables";
+@import "./01-mixins";
+@import "./02-reset";
+@import "./03-common";
+
+body {
+  min-height: 200vh; // ERASE
+  font-family: $barlow;
+  background: $body-bg;
+  background-repeat: no-repeat;
+  background-size: auto;
+  color: $white;
+
+  @include laptop13 {
+    background: url("imgs/deco1.png"), $body-bg;
+    background-position: right -8.75rem top -5rem, center center;
+    background-repeat: no-repeat;
+  }
+
+  @include pc {
+    background-size: 57rem, auto;
+  }
+
+  @include bigPc {
+    background-position: right 11.45rem top, center center;
+  }
+
+  @include fourK {
+    background-position: right 31.45rem top 5.5rem, center center;
+  }
+}
+
+@import "header";
+@import "hero";
+@import "lorem";
+@import "ipsum";
